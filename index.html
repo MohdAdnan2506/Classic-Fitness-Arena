@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Fitness Arena</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* CSS Reset  */
+    body {
+
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        background: url(img/bg-cropped.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .left {
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        left: 28px;
+        text-align: center;
+        color: white;
+        font-family: 'Cinzel', serif;
+    }
+
+    .left img {
+        width: 121px;
+        height: 110px;
+        position: sticky;
+        left: 20px;
+        filter: invert(100%);
+        
+    }
+    .mid {
+
+        display: block;
+        width: 50%;
+        margin: 20px auto;
+        
+
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 24px;
+    }
+
+    .navBar {
+        display: inline-block;
+    }
+
+    .navBar li {
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    .navBar li a {
+        /* font-size: 8px;
+        border: 2px solid white;
+        border-radius: 5px; */
+        color: white;
+        text-decoration: none;
+        margin: 1px 11px;
+        padding: 2px 30px;
+    }
+
+    .navBar li a:hover,
+    .navBar li a.active {
+        color: rgb(255, 141, 141);
+        text-decoration: underline;
+    }
+
+    .navBar li a:active {
+        color: rgb(255, 141, 141);
+        text-decoration: underline;
+
+    }
+
+    .btn {
+        margin: 6px 12px;
+        background-color: black;
+        color: white;
+        padding: 7px 16px;
+        border: 2px solid #4d6caa;
+        border-radius: 12px;
+        font-size: 15px;
+        cursor: pointer;
+        font-style: italic;
+    }
+
+    .btn:hover {
+        color: rgb(255, 141, 141);
+    }
+
+
+    .gymname:hover {
+        cursor: pointer;
+        color: rgb(255, 141, 141);
+    }
+
+    .container {
+        float: right;
+        border: 2px solid #4d6caa;
+        margin: 15px 36px;
+        padding: 0px 30px;
+        width: 15%;
+        border-radius: 9px
+    }
+
+    .container h3 {
+        text-align: center;
+        font-family: 'Libre Baskerville', serif;
+    }
+
+    .formtagline {
+        font-family: 'Montserrat', sans-serif;
+        padding: 0px;
+        margin: -6px;
+        color: #cdb7a2;
+    }
+
+    form {
+        font-size: 14px;
+    }
+
+    .submitbtn {
+        border: none;
+        display: block;
+        width: 35%;
+        margin: 5px auto;
+        background-color: #cdb7a2;
+        border-radius: 7px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    #resetbtn {
+        border: none;
+        display: block;
+        width: 35%;
+        margin: 13px auto;
+        background-color: #cdb7a2;
+        border-radius: 7px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .submitbtn:hover{
+        cursor: pointer;
+    }
+    #resetbtn:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- left box for logo  -->
+            <img src="img/logo.jpg" class="logo" alt="">
+            <div class="gymname ">Classic Fitness <br> Arena </div>
+
+        </div>
+        <div class="mid">
+            <!-- mid box for navbar -->
+            <ul class="navBar">
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- right box for buttons -->
+            <button class="btn">Book a Free Trial Now </button>
+        </div>
+    </header>
+    <div class="container">
+        <h3>HURRY ! </h3>
+        <div class="formtagline"> "Flat 25% Discount For First 50 Members." <br> Fill up to Know More. &darr; </div>
+        <br>
+        <form action="gymbackend.php">
+            <label for="Name">Name:</label>
+            <div> <input type="text" name="nyName" id="Name"> </div>
+            <br>
+            <div> Gender: <br> Male<input type="radio" name="myGender" id="Gender"> Female<input type="radio" name="myGender" id="Gender" > Other<input type="radio" name="myGender" id="Gender"> </div>
+            <br>
+            <label for="Age">Age:</label>
+            <div> <input type="number" name="myAge" id="Age"> </div>
+            <br>
+            <label for="Address">Address:</label>
+            <div> <input type="text" name="myAddress" id="Adress">
+            </div>
+            <br>
+            <label for="Contact">Contact Number:</label>
+            <div>
+               <input type="number" name="myContact" id="Contact">
+            </div>
+            <br>
+            <div> Desired Slot: <br> Morning<input type="radio" name="timing"> Evening<input type="radio" name="timing">
+            </div>
+            <br>
+            <div> <button class="submitbtn"> Submit </button></div>
+            <div> <input type="reset" name="reset" id="resetbtn"> </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
